@@ -439,6 +439,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1789091529}
   - component: {fileID: 1789091528}
+  - component: {fileID: 1789091530}
+  - component: {fileID: 1789091531}
+  - component: {fileID: 1789091532}
   m_Layer: 0
   m_Name: Hero
   m_TagString: Untagged
@@ -506,13 +509,64 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1789091527}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.38, y: 0.15, z: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1789091530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789091527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984040220296a4345850e25155f8d842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startPosition: {x: -7, y: 0, z: 0}
+  _speed: 3
+  _tapForce: 250
+  _rotationSpeed: 1
+  _maxRotationZ: 60
+  _minRotationZ: -60
+--- !u!50 &1789091531
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789091527}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!114 &1789091532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1789091527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 977343c731ced5c469621db0fcf8eb75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2076619481
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,6 +661,10 @@ PrefabInstance:
     - target: {fileID: 2802725562703609905, guid: ac18b9eb32f2f724f91ec96756bbc755, type: 3}
       propertyPath: m_Name
       value: GroundEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 2802725562703609905, guid: ac18b9eb32f2f724f91ec96756bbc755, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2802725562703609919, guid: ac18b9eb32f2f724f91ec96756bbc755, type: 3}
       propertyPath: m_RootOrder
@@ -708,6 +766,10 @@ PrefabInstance:
     - target: {fileID: 7066311051134843002, guid: 1f56c79654c7e264ab2e7888e0528355, type: 3}
       propertyPath: m_Name
       value: AirEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 7066311051134843002, guid: 1f56c79654c7e264ab2e7888e0528355, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f56c79654c7e264ab2e7888e0528355, type: 3}
