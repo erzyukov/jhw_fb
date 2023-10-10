@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2802725562703609919}
   - component: {fileID: 2802725562703609904}
   - component: {fileID: 2802725562703609918}
+  - component: {fileID: 6670042811157521055}
   m_Layer: 0
   m_Name: GroundEnemy
   m_TagString: Untagged
@@ -106,6 +107,32 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!61 &6670042811157521055
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2802725562703609905}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.035915017, y: -0.17059648}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2, y: 1.26}
+    newSize: {x: 2, y: 1.26}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.425359, y: 0.60754275}
+  m_EdgeRadius: 0
 --- !u!1 &2802725563683660908
 GameObject:
   m_ObjectHideFlags: 0

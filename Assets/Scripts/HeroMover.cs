@@ -18,13 +18,12 @@ namespace Game
 
 		private void Start()
 		{
-			transform.position = _startPosition;
-
 			_rigidbody = GetComponent<Rigidbody2D>();
-			_rigidbody.velocity = Vector2.zero;
 
 			_maxRotation = Quaternion.Euler(0, 0, _maxRotationZ);
 			_minRotation = Quaternion.Euler(0, 0, _minRotationZ);
+			
+			ResetHero();
 		}
 
 		private void Update()
@@ -37,6 +36,13 @@ namespace Game
 			}
 
 			transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
+		}
+
+		public void ResetHero()
+		{
+			transform.position = _startPosition;
+			transform.rotation = Quaternion.identity;
+			_rigidbody.velocity = Vector2.zero;
 		}
 	}
 }
