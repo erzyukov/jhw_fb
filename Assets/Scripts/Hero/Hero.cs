@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game
 {
@@ -10,6 +11,8 @@ namespace Game
 
 		private HeroMover _heroMover;
 		private BulletSpawner _bulletSpawner;
+
+		public event UnityAction Died;
 
 		private void Start ()
 		{
@@ -26,14 +29,9 @@ namespace Game
 			}
 		}
 
-		public void ResetHero()
-		{
-			_heroMover.ResetHero();
-		}
-
 		public void Die()
 		{
-			Time.timeScale = 0;
+			Died.Invoke();
 		}
 	}
 }

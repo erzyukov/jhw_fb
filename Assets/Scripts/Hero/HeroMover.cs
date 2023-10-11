@@ -38,7 +38,7 @@ namespace Game
 			transform.rotation = Quaternion.Lerp(transform.rotation, _minRotation, _rotationSpeed * Time.deltaTime);
 		}
 
-		public void ResetHero()
+		private void ResetHero()
 		{
 			transform.position = _startPosition;
 			transform.rotation = Quaternion.identity;
