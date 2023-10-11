@@ -13,9 +13,6 @@ namespace Game
 
 		private void OnTriggerEnter2D(Collider2D collision)
 		{
-			if (collision.gameObject.TryGetComponent(out IDestuctable destuctable))
-				destuctable.DestroyObject();
-
 			gameObject.SetActive(false);
 		}
 

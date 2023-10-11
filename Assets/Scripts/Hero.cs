@@ -10,7 +10,6 @@ namespace Game
 
 		private HeroMover _heroMover;
 		private BulletSpawner _bulletSpawner;
-		private int _score;
 
 		private void Start ()
 		{
@@ -29,7 +28,6 @@ namespace Game
 
 		public void ResetHero()
 		{
-			_score = 0;
 			_heroMover.ResetHero();
 		}
 
