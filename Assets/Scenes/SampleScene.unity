@@ -555,6 +555,7 @@ MonoBehaviour:
   _container: {fileID: 1355761297}
   _capacity: 5
   _levelScore: {fileID: 1675312601}
+  _bulletSpawner: {fileID: 1255506514}
   _prefab: {fileID: 7066311051134843002, guid: 1f56c79654c7e264ab2e7888e0528355, type: 3}
   _yPosition: 3.78
   _startSpawnDelay: 2
@@ -831,6 +832,54 @@ Transform:
   m_Father: {fileID: 519420032}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1255506513
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1255506515}
+  - component: {fileID: 1255506514}
+  m_Layer: 0
+  m_Name: EnemyBulletSpawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1255506514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255506513}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73102dc4c069d742b1fd846fa233cf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _container: {fileID: 953552425}
+  _capacity: 10
+  _prefab: {fileID: 4131239762483744530, guid: c20cdddcf934adf41bfac4e407c43c54, type: 3}
+  _speed: 15
+--- !u!4 &1255506515
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255506513}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 13.656701, y: -0.364838, z: -0.0040523377}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1355761297
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,7 +909,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1619874440
 GameObject:
@@ -909,6 +958,7 @@ MonoBehaviour:
   _container: {fileID: 1355761297}
   _capacity: 5
   _levelScore: {fileID: 1675312601}
+  _bulletSpawner: {fileID: 1255506514}
   _prefab: {fileID: 2802725562703609905, guid: ac18b9eb32f2f724f91ec96756bbc755, type: 3}
   _yPosition: -3.832
   _startSpawnDelay: 0
@@ -956,7 +1006,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1789091527
 GameObject:

@@ -12,8 +12,11 @@ namespace Game
 		private Camera _camera;
 		private List<GameObject> _pool = new List<GameObject>();
 
-		protected void Initialize(GameObject prefab)
+		protected void Initialize(GameObject prefab, GameObject container = null)
 		{
+			if (container != null)
+				_container = container;
+
 			_camera = Camera.main;
 
             for (int i = 0; i < _capacity; i++)

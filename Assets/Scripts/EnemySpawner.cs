@@ -6,6 +6,7 @@ namespace Game
 	public class EnemySpawner : ObjectPool
 	{
 		[SerializeField] private LevelScore _levelScore;
+		[SerializeField] private BulletSpawner _bulletSpawner;
 		[SerializeField] private GameObject _prefab;
 		[SerializeField] private float _yPosition;
 		[SerializeField] private float _startSpawnDelay;
@@ -39,10 +40,12 @@ namespace Game
 			if (TryGetObject(out GameObject enemyObject))
 			{
 				enemyObject.transform.position = new Vector3(transform.position.x, _yPosition, transform.position.z);
-				enemyObject.SetActive(true);
 
 				Enemy enemy = enemyObject.GetComponent<Enemy>();
 				enemy.Killed += OnEnemyKilled;
+				enemy.Initialize(_bulletSpawner);
+
+				enemyObject.SetActive(true);
 			}
 
 			DisableObjectAbroadScreen();
